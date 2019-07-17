@@ -92,7 +92,7 @@ const pipesToCommas = (str) =>
 //# convert foo=bar|version=1.2.3 to
 //# foo=bar,version=1.2.3
 {
-  return str.split('|').join(',')
+  return str ? str.split('|').join(',') : null
 }
 
 const tryJSONParse = function (str) {
